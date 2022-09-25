@@ -12,10 +12,6 @@ window.addEventListener("load", (e) => {
       "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
     );
     const data = await response.json();
-    // console.log(data.meals[0].strMeal);
-    // console.log(data.meals[0].strCategory);
-    // console.log(data.meals[0].strMealThumb);
-    // console.log(data.meals[0].strArea);
 
     data.meals.forEach((meal) => {
       console.log(meal);
@@ -54,24 +50,4 @@ function createMealCard(htmlText) {
   // console.log(template.content.firstElementChild);
 
   return template.content.firstElementChild;
-}
-
-{
-  /* <div class="card">
-  <div class="card_category">
-    <i class="fa-solid fa-clock text-2xl"></i>
-    <span>25min</span>
-  </div>
-  <img
-    src="images/stew.jpg"
-    alt=""
-    class="w-full object-cover opacity-50 hover:opacity-100 transition-opacity"
-  />
-  <div class="m-6">
-    <span class="font-bold text-2xl">5 Bean Chilli Stew</span>
-    <span class="block text-lg text-gray-600 hover:text-gray-800">
-      Recipe by Mario
-    </span>
-  </div>
-</div> */
 }
