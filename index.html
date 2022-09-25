@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Crash Course | Traversy Media</title>
+    <!-- Font Awsome v-6.2.0 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Main JS File -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="grid grid-cols-1 md:grid-cols-4 h-screen">
+      <!-- Content Wrapper -->
+      <div class="md:col-span-1">
+        <nav>
+          <div class="flex justify-between items-center px-5 md:px-0">
+            <h1
+              class="text-center py-2 md:py-4 px-5 bg-primary text-white italic w-fit md:w-[100%] my-2 mt-2 md:mt-0 rounded-[5rem] md:rounded-none"
+            >
+              <a href="/" class="text-2xl md:text-3xl lg:text-4xl">
+                Food Tailwind
+              </a>
+            </h1>
+            <i
+              id="hamburger_menu"
+              class="fa-solid fa-bars text-4xl text-primary md:hidden mx-4 my-4 cursor-pointer"
+            ></i>
+          </div>
+
+          <ul
+            class="hidden md:block transition-all ease-in-out duration-300 select-none"
+            id="main_menu"
+          >
+            <li
+              class="w-fit my-4 translate-x-[-45px] hover:translate-x-0 transition-transform duration-300 ease-in-out hover:font-bold"
+            >
+              <a href="#" class="flex items-center space-x-4">
+                <i
+                  class="fa-solid fa-house text-3xl text-primary w-[45px] flex justify-center"
+                ></i>
+                <span class="text-2xl">Home</span>
+              </a>
+            </li>
+            <li
+              class="w-fit my-4 translate-x-[-45px] hover:translate-x-0 transition-transform duration-300 ease-in-out hover:font-bold"
+            >
+              <a href="#" class="flex items-center space-x-4">
+                <i
+                  class="fa-solid fa-user text-3xl text-primary w-[45px] flex justify-center"
+                ></i>
+                <span class="text-2xl">About</span>
+              </a>
+            </li>
+            <li
+              class="w-fit my-4 translate-x-[-45px] hover:translate-x-0 transition-transform duration-300 ease-in-out hover:font-bold"
+            >
+              <a href="#" class="flex items-center space-x-4">
+                <i
+                  class="fa-solid fa-envelope text-3xl text-primary w-[45px] flex justify-center"
+                ></i>
+                <span class="text-2xl">Contact</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <main class="bg-primary py-4 pb-24 px-6 md:col-span-3">
+        <div class="flex space-x-4 justify-center md:justify-end text-white">
+          <a href="#" class="btn block border-white">Log in</a>
+          <a href="#" class="btn block border-white">Sign up</a>
+        </div>
+
+        <header class="mt-12 text-white">
+          <h2 class="text-5xl mb-5">Recipies</h2>
+        </header>
+
+        <div>
+          <h4 class="mb-4 text-gray-200 text-xl">Latest Recipies</h4>
+
+          <div
+            id="meals_container"
+            class="my-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            <!-- Cards Will Be Appended Using JavaScript -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
